@@ -2,7 +2,6 @@
 Estructura modular CSS y convención de nombres que uso en mis proyectos. Las convenciones de nomenclaturas para las clases son la parte principal de lo que ofrece una metodología como [SMACSS](https://smacss.com/), [BEM](http://getbem.com/) u [OOCSS](http://oocss.org/).
 
 ## Componentes
-En esta vida (al 2018) todo se basa en componentes:
 Sintaxis: `<componente>[-elemento][--modificador]`
 
 Esto tiene varios beneficios al escribir código:
