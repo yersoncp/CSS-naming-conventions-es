@@ -5,7 +5,7 @@ Estructura modular CSS y convención de nombres que uso en mis proyectos
 En esta vida (al 2018) todo se basa en componentes:
 Sintaxis: `<componente>[-elemento][--modificador]`
 
-Esto tiene varios beneficios el escribir código:
+Esto tiene varios beneficios al escribir código:
 * Ayuda a distinguir las clases de los componentes, los elementos descendientes y los modificadores.
 * Evita el fuerte acoplado el HTML y especificación excesiva de selectores.
 
@@ -53,8 +53,23 @@ Un modificador de componente es una clase que modifica la presentación del comp
 <button class="Button Button--primary" type="button">…</button>
 ```
 
+## Estado (is-state)
+Refleja los cambios en el estado de un componente. Siempre deben usarse como una clase contigua acompañador de algún componente.
+
+```css
+.Polygon { /* … */ }
+.Polygon.is-expanded { /* … */ }
+```
+
+```html
+<article class="Polygon is-expanded">
+  …
+</article>
+```
+
+
 ## Recursos y fuentes
-Ésta guia de una recopilación de diversos fuentes y adaptaciones hechas por mi en base a mi experiencia en diversos proyectos frontend.
+Esta guia es una recopilación de diversos fuentes y adaptaciones hechas por mi en base a mi experiencia en diversos proyectos frontend.
 
 * [SUIT CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md)
 * [BEM Methodoloy](http://getbem.com/naming/)
