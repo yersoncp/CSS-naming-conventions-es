@@ -67,12 +67,12 @@ Refleja los cambios en el estado de un componente. Siempre deben usarse como una
 ```
 
 ## JavaScript hooks
-Evitar la vinculación de CSS y JavaScript en la misma clase. Llamados al DOM desde JavaScript pueden romper cualquier el CSS.
+Evitar la vinculación de CSS y JavaScript en la misma clase. Llamados al DOM desde JavaScript pueden romper cualquier clase en CSS.
 
-Recomiendo crear clases específicas para vincular con CSS usando el prefijo `.js-`:
+Recomiendo crear clases específicas para vincular con CSS usando el prefijo `js-`:
 
 ```html
-<a class="link js-request-to-country">Request to Country</a>
+<a class="link js-request-country">Request Country</a>
 ```
 
 ## Consideraciones adicionales
