@@ -2,66 +2,64 @@
 Estructura modular CSS y convención de nombres que uso en mis proyectos. Las convenciones de nomenclaturas para las clases son la parte principal de lo que ofrece una metodología como [SMACSS](https://smacss.com/), [BEM](http://getbem.com/) u [OOCSS](http://oocss.org/).
 
 ## Componentes
-Sintaxis: `<componente>[-elemento][--modificador]`
+Sintaxis: `<componente>[__elemento][--modificador]`
 
 Esto tiene varios beneficios al escribir código:
 * Ayuda a distinguir las clases de los componentes, los elementos descendientes y los modificadores.
 * Evita el fuerte acoplado el HTML y especificación excesiva de selectores.
 
 ### Nombre de componente
-El nombre del componente se escribe bajo de convención `PascalCase`.
 
 ```css
-.MiComponente { /* … */ }
+.componente { /* … */ }
+.mi-componente { /* … */ }
 ```
 
 ```html
-<article class="MiComponente">
+<article class="componente">
   …
 </article>
 ```
 
 ### Elemento o componente descendiente
-Un componente descendiente es una clase que está asociada a un componente. Deben escribirse en `camelCase`.
-
+Un componente descendiente es una clase que está asociada a un componente.
 ```html
-<article class="Polygon">
-   <header class="Polygon-header">
-      <img class="Polygon-avatar" src="{{src}}" alt="{{alt}}">
+<article class="component">
+   <header class="component__header">
       …
    </header>
-   <div class="Polygon-bodyText">
+   <div class="component__body">
       …
    </div>
 </article>
 ```
 
 ### Modificador
-Un modificador de componente es una clase que modifica la presentación del componente base de alguna forma (por ejemplo, para una determinada configuración del componente). Los nombres de los modificadores se escriben en `camelCase` y se deben separar del nombre del componente con dos guiones.
+Un modificador de componente es una clase que modifica la presentación del componente base de alguna forma (por ejemplo, para una determinada configuración del componente). Se deben separar del nombre del componente con dos guiones.
 
 ```css
-.Card {
+.card {
    /* … */
 }
-.Card--featured {
+.card--featured {
    /* … */
 }
 ```
 
 ```html
-<div class="Card Card-featured">…</div>
+<div class="card card-featured">…</div>
 ```
 
 ## Estado (is-state)
 Refleja los cambios en el estado de un componente. Siempre deben usarse como una clase contigua acompañador de algún componente.
 
 ```css
-.Polygon { /* … */ }
-.Polygon.is-expanded { /* … */ }
+.componente { /* … */ }
+.componente.is-expanded { /* … */ }
 ```
 
 ```html
-<article class="Polygon is-expanded">
+<article class="componente is-expanded">
   …
 </article>
 ```
